@@ -42,3 +42,5 @@ bool TerminalHandler::kbhit() {
 }
 
 void TerminalHandler::clear() { std::cout << WIPE_SCREEN << RESET; }
+void TerminalHandler::signalHandler(int signal) { TerminalHandler::disableRawMode(); }
+void TerminalHandler::registerSignalHandler() { signal(SIGINT, TerminalHandler::signalHandler); }

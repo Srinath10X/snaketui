@@ -16,8 +16,10 @@ public:
   void init();
   bool kbhit();
   void clear();
-  void enableRawMode();
-  void disableRawMode();
+  static void enableRawMode();
+  static void disableRawMode();
+  static void signalHandler(int);
+  static void registerSignalHandler();
 };
 
 #endif

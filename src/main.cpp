@@ -114,6 +114,7 @@ void SnakeGame::run() {
 int main(int argc, char *argv[]) {
   SnakeGame snake_game;
   terminal.init();
+  terminal.registerSignalHandler();
   snake_game.run();
   return 0;
 }
